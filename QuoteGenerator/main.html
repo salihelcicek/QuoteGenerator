@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote Generator</title>
+    <script defer src="main.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+
+<style>
+     body {
+            background-color: #a7d129;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+    .container
+    {
+        border-radius: 25px;
+        background: linear-gradient(to right, #35524a, #355241);
+        box-shadow: 0 0 30px rgba(255, 255, 255, 0.692); 
+        width:80vh;
+        height:50vh;
+        color: #f5f5f5;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        padding:10px;
+    }
+
+    h1
+    {
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-size:50px;
+        word-spacing: 20px;
+        text-shadow: 2px 2px 2px rgb(125, 167, 139);
+    }
+    .container table
+    {
+        display:flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+
+    #author
+    {
+        text-align: right;
+        font-family: Kanit;
+        font-size:16px;
+    }
+    td
+    {
+     word-wrap: break-word;
+    }
+    button
+    {
+        border-radius: 30px;
+        font-size:20px;
+        padding:20px 40px;
+        border:none;
+        cursor: pointer;
+    }
+    #tweet img
+    {
+        width:30px;
+        height: 30px;
+    }
+    #newQ
+    {
+        border: 1px #f5f5f5 solid;
+        color:#f5f5f5;
+        background-color:rgb(27, 180, 129);
+    }
+    #newQ:hover
+    {
+        background-color: rgb(19, 107, 78);;
+    }
+    #tweet:hover
+    {
+        background-color:rgb(187, 184, 184);
+    }
+    #tweet
+    {
+        background-color:#f5f5f5;;
+        color:rgb(27, 180, 129);
+        border: 2px rgb(27, 180, 129) solid;
+        display:flex;
+        gap:7px;
+        align-items: center;
+    }
+    #buttons
+    {
+        display: flex;
+        justify-content: space-around;     
+        padding:30px; 
+    }
+    a {
+            color: inherit; /* Mevcut metin rengi ile aynı yapar */
+            text-decoration: none; /* Altı çizili özelliğini kaldırır */
+        }
+</style>
+<body>
+    <div class="container">
+        <table>
+            <tr>
+                <td><h1>Quote of the Day</h1></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td id="quote"><h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3></td>
+            </tr>
+
+            <tr>
+                <td id="author"><br><h4>Author</h4></td>
+                <td></td>
+            </tr>
+
+            <tr id="buttons">
+                <td><button id="newQ" onclick="getquote()">New Quote</button></td>
+                <td><button id="tweet" onclick="tweet()"><img src="pngegg.png" alt="">Tweet</button></td>
+                </tr>
+        </table>   
+    </div>
+</body>
+</html>
